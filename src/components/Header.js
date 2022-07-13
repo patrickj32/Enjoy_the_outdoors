@@ -1,6 +1,9 @@
 import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
+import Compass from '../images/compass.png'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
 // import NavDropdown from 'react-bootstrap/NavDropdown'
 
 function Header(props) {
@@ -9,19 +12,28 @@ function Header(props) {
 
     return (
 
-        <Navbar bg="light" expand="lg">
-            {/* possible logo right here */}
-            <Navbar.Brand href="#home">Hiking</Navbar.Brand>
+        <Container fluid>
+            <Navbar bg="light" expand="lg" className='Navbar' sticky="top"  >
 
-            <Container>
-                
-                <Navbar.Brand href="#home">Hiking</Navbar.Brand>
+           
+                <Navbar.Brand href="#home"><img height="85" src={Compass}/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
+                <Nav className="NavText" >
+                        <Nav.Link href="#home" >Home</Nav.Link>
                         <Nav.Link href="#link">Find your park</Nav.Link>
                         <Nav.Link href="#link">Info</Nav.Link>
+                    <Form className="d-flex">
+                        <Form.Control   
+                            type="search"
+                            placeholder="Search"
+                            className="me-2"
+                            aria-label="Search"
+                        />
+                        <Button className="SearchButton" variant="outline-dark">Search
+                        
+                        </Button>
+                    </Form>
 
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -32,8 +44,13 @@ function Header(props) {
                 </NavDropdown> */}
                     </Nav>
                 </Navbar.Collapse>
-            </Container>
         </Navbar>
+    </Container >
+
+
+
+
+
     )
 }
 export default Header

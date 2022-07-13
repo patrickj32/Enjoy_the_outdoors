@@ -7,7 +7,6 @@ function Home(props) {
     return (
         <div className="Home">
         <Header />
-        This is the Header Component
         <Hero />
 
         </div>
