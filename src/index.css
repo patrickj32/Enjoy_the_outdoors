@@ -15,10 +15,9 @@ code {
 /* ******************Navbar****************** */
 
 .NavText {
-
   font-weight: bold;
   font-size: 160%;
-  font-family: 'Abril Fatface';
+  font-family: "Abril Fatface";
 }
 
 /* **************Hero Stuff*************** */
@@ -44,14 +43,29 @@ code {
   font-weight: bold;
   font-size: 200%;
   font-family: "Abril Fatface";
+  color: black;
 }
 
-.SearchButton{
+.SearchButton {
   position: absolute;
   right: 25px;
   font-weight: bold;
   font-size: 100%;
   font-family: "Abril Fatface";
-
 }
 
+.LetsGoBtn {
+  position: absolute;
+  left: 10%;
+  top: 45px;
+  font-style: italic;
+  font-weight: bold;
+  width: 200px;
+  font-size: 100%;
+  font-family: "Abril Fatface";
+  color: black;
+}
+
+.Footer {
+  width: 100%;
+}

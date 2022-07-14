@@ -20,7 +20,7 @@ function Header(props) {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="NavText" >
-                        <Nav.Link href="#home" >Home</Nav.Link>
+                        <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#link">Find your park</Nav.Link>
                         <Nav.Link href="#link">Info</Nav.Link>
                     <Form className="d-flex">

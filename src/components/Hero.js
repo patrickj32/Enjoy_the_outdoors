@@ -1,4 +1,5 @@
 
+import { Button } from 'react-bootstrap'
 import Figure from 'react-bootstrap/Figure'
 import MtnFigure from '../images/MtnFigure.png'
 function Hero(prop) {
@@ -16,6 +17,8 @@ function Hero(prop) {
                 />
                 <Figure.Caption className='HeroText' >
                     Go The Fuck Outside
+                    <Button className="LetsGoBtn" variant="outline-light">Lets Go</Button>
+
                 </Figure.Caption>
             </Figure>
 

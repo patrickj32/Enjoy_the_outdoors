@@ -1,3 +1,4 @@
+import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
 
@@ -8,6 +9,7 @@ function Home(props) {
         <div className="Home">
         <Header />
         <Hero />
+        <Footer />
 
         </div>
 
