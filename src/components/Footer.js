@@ -1,6 +1,6 @@
 import Navbar from 'react-bootstrap/Navbar'
 import NavbarBrand from 'react-bootstrap/NavbarBrand'
-import Container from 'react-bootstrap/Container'
+import CardGroup from 'react-bootstrap/CardGroup'
 import Card from 'react-bootstrap/Card'
 
 
@@ -10,12 +10,11 @@ import Card from 'react-bootstrap/Card'
 
 function Footer(props) {
     return (  
-        <div className="Footer">
+        <div className="Footer ">
         
         
-            <Navbar bg="dark" expand="lg" sticky="top">
-                {/* <Container> */}
-                    <Card style={{ width: '18rem' }}>
+                <CardGroup>
+                <Card bg="dark" text="white" style={{ width: '18rem' }}>
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
@@ -27,7 +26,7 @@ function Footer(props) {
                             <Card.Link href="#">Another Link</Card.Link>
                         </Card.Body>
                     </Card>
-                <Card style={{ width: '18rem' }}>
+                <Card bg="dark" text="white" style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title>Card Title</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
@@ -40,7 +39,7 @@ function Footer(props) {
                     </Card.Body>
                     
                 </Card>
-                <Card style={{ width: '18rem' }}>
+                <Card bg="dark" text= "white" style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title>Card Title</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
@@ -52,8 +51,7 @@ function Footer(props) {
                         <Card.Link href="#">Another Link</Card.Link>
                     </Card.Body>
                 </Card>
-                {/* </Container> */}
-            </Navbar>
+                </CardGroup>
         
         
         

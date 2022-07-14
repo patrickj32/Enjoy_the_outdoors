@@ -12,28 +12,19 @@ function Header(props) {
 
     return (
 
-        <Container fluid>
             <Navbar bg="light" expand="lg" className='Navbar' sticky="top"  >
+                <Container fluid>
+
 
            
                 <Navbar.Brand href="#home"><img height="85" src={Compass}/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="NavText" >
-                        <Nav.Link href="#home">Home</Nav.Link>
+                    {/* the garbage can was just a bootstrap icon example */}
+                        <Nav.Link href="#home">Home <i className="bi bi-trash3"></i></Nav.Link>
                         <Nav.Link href="#link">Find your park</Nav.Link>
                         <Nav.Link href="#link">Info</Nav.Link>
-                    <Form className="d-flex">
-                        <Form.Control   
-                            type="search"
-                            placeholder="Search"
-                            className="me-2"
-                            aria-label="Search"
-                        />
-                        <Button className="SearchButton" variant="outline-dark">Search
-                        
-                        </Button>
-                    </Form>
 
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -43,9 +34,22 @@ function Header(props) {
                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                 </NavDropdown> */}
                     </Nav>
+                    <Form className="d-flex ms-auto">
+                        <Form.Control
+                            type="search"
+                            placeholder="Search"
+                            className="me-2"
+                            aria-label="Search"
+                        />
+                        <Button className="SearchButton" variant="outline-dark">Search
+
+                        </Button>
+                    </Form>
+
                 </Navbar.Collapse>
+        </Container >
+
         </Navbar>
-    </Container >
 
 
 

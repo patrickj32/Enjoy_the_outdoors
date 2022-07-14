@@ -17,10 +17,13 @@ function Hero(prop) {
                 />
                 <Figure.Caption className='HeroText' >
                     Go The Fuck Outside
-                    <Button className="LetsGoBtn" variant="outline-light">Lets Go</Button>
+
+                    <Button className="LetsGoBtn opacity-75 " variant="outline-secondary">Lets Go</Button>
 
                 </Figure.Caption>
+
             </Figure>
+
 
 
         </div>
