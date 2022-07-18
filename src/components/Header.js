@@ -22,7 +22,7 @@ function Header(props) {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="NavText" >
                     {/* the garbage can was just a bootstrap icon example */}
-                        <Nav.Link href="#home">Home <i className="bi bi-trash3"></i></Nav.Link>
+                        <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#link">Find your park</Nav.Link>
                         <Nav.Link href="#link">Info</Nav.Link>
 

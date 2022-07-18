@@ -49,10 +49,7 @@ code {
   color: black;
 }
 
-/* .SearchButton {
-  font-weight: bold;
-  font-family: "Abril Fatface";
-} */
+
 
 .LetsGoBtn {
   position: absolute;
@@ -66,6 +63,11 @@ code {
   color: black;
 }
 
-.Footer {
-  width: 100%;
+/* ***********Attractions*********** */
+
+.waterFallPic{
+
+width: 125%;
+bottom: 25%;
 }
+
