@@ -23,7 +23,7 @@ function Attractions(props) {
                 <Card  style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title>Waterfalls</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">Go look at some ucking waterfalls</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Go look at some fucking waterfalls</Card.Subtitle>
                         <Card.Text>
                             <img className="waterFallPic" src='https://parktrust.org/wp-content/uploads/fly-images/6886/Untitled-design-28-640x360-c.png'></img>
 
