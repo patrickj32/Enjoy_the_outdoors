@@ -40,8 +40,6 @@ code {
 }
 
 .HeroText {
-  position: absolute;
-  left: 15%;
   font-weight: bold;
   font-size: 200%;
   font-family: "Abril Fatface";
@@ -49,9 +47,6 @@ code {
 }
 
 .LetsGoBtn {
-  position: absolute;
-  left: 10%;
-  top: 45px;
   font-style: italic;
   font-weight: bold;
   width: 200px;
@@ -75,28 +70,42 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.MountainSearchBar {
-  position: absolute;
-  left: 40%;
-  bottom: -100%;
+.MountainsInfoSearchBar {
   font-style: italic;
-  font-weight: bold;
-  width: 300px;
-  font-size: 100%;
+  font-weight: lighters;
+  width: 500px;
+  font-size: 75%;
   font-family: "Abril Fatface";
   color: black;
 
-  /* dont like the bottom positioning method */
 }
 
 .MountainsInfoImage {
-  position: absolute;
-  left: 40%;
-  bottom: -100%;
   font-style: italic;
   font-weight: bold;
   width: 200px;
   font-size: 100%;
   font-family: "Abril Fatface";
   color: black;
+}
+
+.MountainsInfoText{
+
+  font-weight: bold;
+  font-size: 500%;
+  font-family: "Abril Fatface";
+  color: burlywood
+
+}
+
+.MountainsInfoBtn{
+
+   font-style: italic;
+  font-weight: bold;
+  width: 500px;
+  font-size: 50%;
+  font-family: "Abril Fatface";
+  color: burlywood;
+
+
 }

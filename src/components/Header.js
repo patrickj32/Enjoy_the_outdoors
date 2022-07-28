@@ -4,6 +4,7 @@ import Compass from '../images/compass.png'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
+import { LinkContainer } from 'react-router-bootstrap'
 // import NavDropdown from 'react-bootstrap/NavDropdown'
 
 function Header(props) {
@@ -12,18 +13,28 @@ function Header(props) {
 
     return (
 
-            <Navbar bg="light" expand="lg" className='Navbar' sticky="top"  >
-                <Container fluid>
+        <Navbar bg="light" expand="lg" className='Navbar' sticky="top"  >
+            <Container fluid>
 
 
-           
-                <Navbar.Brand href="#home"><img height="85" src={Compass}/></Navbar.Brand>
+
+                <Navbar.Brand href="#home"><img height="85" src={Compass} /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="NavText" >
-                    {/* the garbage can was just a bootstrap icon example */}
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Find your park</Nav.Link>
+                    <Nav className="NavText" >
+                        {/* the garbage can was just a bootstrap icon example */}
+                        <LinkContainer to="/">
+                            <Nav.Link>Home</Nav.Link>
+                        </LinkContainer>
+
+                        <LinkContainer to="/parks">
+                            <Nav.Link >Parks</Nav.Link>
+                            </LinkContainer>
+
+                        <LinkContainer to="/mountains">
+                            <Nav.Link >Mountains</Nav.Link>
+                        </LinkContainer>
+
                         <Nav.Link href="#link">Info</Nav.Link>
 
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -47,7 +58,7 @@ function Header(props) {
                     </Form>
 
                 </Navbar.Collapse>
-        </Container >
+            </Container >
 
         </Navbar>
 

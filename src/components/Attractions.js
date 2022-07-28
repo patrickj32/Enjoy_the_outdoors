@@ -38,7 +38,7 @@ function Attractions(props) {
                         <Card.Title>Trails</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">Go walk some fucking trails</Card.Subtitle>
                         <Card.Text>
-                            <img src="https://www.tripsavvy.com/thmb/udfIrUb_SPsALK5HbhXZ2UQlmEo=/735x0/man-on-early-morning-hike-up-mountainside-1056063244-06433cd9244c4ca38ec43d2782062ba1.jpg"></img>
+                            <img className="hickingPic" src="https://www.tripsavvy.com/thmb/udfIrUb_SPsALK5HbhXZ2UQlmEo=/735x0/man-on-early-morning-hike-up-mountainside-1056063244-06433cd9244c4ca38ec43d2782062ba1.jpg"></img>
                         </Card.Text>
                         <Card.Link href="#">Card Link</Card.Link>
                         <Card.Link href="#">Another Link</Card.Link>
