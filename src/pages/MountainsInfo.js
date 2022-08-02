@@ -16,7 +16,7 @@ function MountainsInfo() {
             <Header />
             <div className=" MountainsInfoHero MountainsInfoText d-flex justify-content-top align-items-center flex-column margin-top: 8px">
 
- 
+
                 Mountains
 
                 {/* <Button className="MountainsInfoBtn opacity-75 " variant="outline-secondary">Lets Go</Button> */}
@@ -24,7 +24,7 @@ function MountainsInfo() {
 
             </div>
 
-
+            <Footer />
         </div>
 
 
