@@ -10,7 +10,7 @@ import Card from 'react-bootstrap/Card'
 
 function Footer(props) {
     return (
-        <div className="Footer ">
+        <div className="Footer position-relative bottom-0 w-100">
 
 
             <CardGroup>
