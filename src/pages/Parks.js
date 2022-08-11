@@ -43,7 +43,7 @@ function Parks() {
 
                     //put the data in the console just so we can see it
                     setLocations(locationData)
-                    console.log(locations)
+                    console.log((locationData))
 
 
                 })
@@ -158,6 +158,12 @@ function Parks() {
 
 export default Parks;
 
+
+// 8/08/22
+// Lets get the new drop down items working with a selection
+// use proect exapmples as reference.
+
+// make the problems BITE sized
 
 
 
