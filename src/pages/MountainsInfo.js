@@ -4,7 +4,8 @@ import Button from 'react-bootstrap/Button'
 import Footer from "../components/Footer"
 import MtnFigure from '../images/MtnFigure.png'
 import { Dropdown, Form } from 'react-bootstrap'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
 
 
 
@@ -12,11 +13,17 @@ function MountainsInfo() {
 
     let [mountains, setMountain] = useState([]);
 
+    useEffect(() => {
+
+        mountainsearchHandler()
+    }, []);
+
+
     let mountainsearchHandler = (event) => {
 
         setMountain([])
 
-        if (event.target.value === "pickamountain") {
+        // if (event.target.value === "pickamountain") {
 
         fetch(`/data/mountains.json`,
             {
@@ -41,8 +48,12 @@ function MountainsInfo() {
             .catch((error) => {
                 console.log(error)
             });
-        }
+        // }
+
+
     }   
+
+    
     
 
     let mountainsDropdown = ""
@@ -54,7 +65,7 @@ function MountainsInfo() {
 
         mountainsDropdown =
             <Form.Select onChange={mountainsearchHandler} className="w-25" aria-label="Default select example">
-                <option value="">Pick one</option>
+                <option value="">Select a Mountain</option>
                 {mountainsListItems}
 
             </Form.Select>
@@ -72,9 +83,9 @@ function MountainsInfo() {
 
                     
 
-                        <Form.Select onClick={mountainsearchHandler} className="w-25" aria-label="Default select example">
+                        {/* <Form.Select onClick={mountainsearchHandler} className="w-25" aria-label="Default select example">
                         <option value="pickamountain">Select a Mountain</option>
-                        </Form.Select>
+                        </Form.Select> */}
                     {mountainsDropdown}
 
 
