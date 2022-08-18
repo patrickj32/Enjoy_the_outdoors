@@ -4,7 +4,13 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import NParkPic from '../images/NationalPark.jpg'
 import { Form } from 'react-bootstrap'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Button } from 'react-bootstrap'
+import { Table } from 'react-bootstrap'
+import { getConfig } from "@testing-library/react"
+import ParksTable from "../components/ParksTable"
+import { useResolvedPath } from "react-router-dom"
+
 
 
 
@@ -15,7 +21,12 @@ function Parks() {
 
 
     let [locations, setLocations] = useState([]);
+   
     let [type, setTypes] = useState([]);
+    let [allNationalParks, setAllNationalParks] = useState([]);
+    let [showAllTable, setShowALLTable] = useState(false);
+
+
 
 
     let searchTypeHandler = (event) => {
@@ -87,50 +98,84 @@ function Parks() {
 
         }
 
-
-
-
     }
+    // ********function for view all***********
 
+
+    useEffect(() => {
+
+
+        fetch("/data/nationalparks.json")
+            .then((response) => response.json())
+            .then((allNPData) => {
+
+                setAllNationalParks(allNPData.parks)
+                console.log((allNPData.parks))
+
+
+            })
+            .catch((error) => console.log(error))
+
+    }, []);
+
+
+
+    // ****Dropdowns and buttons*****
     let locationsDropdown = ""
     if (locations.length > 0) {
-        let locationsListItems = locations.map((location,i) => {
+        let locationsListItems = locations.map((location, i) => {
             return <option key={i}>{location}</option>
         })
 
-       locationsDropdown =
+        locationsDropdown =
 
             <Form.Select onChange={searchTypeHandler} className="w-25">
-                <option value="">Pick Something</option>
+                <option value="">Select a location</option>
                 {locationsListItems}
 
             </Form.Select>
 
+
+
     }
 
-        let typeDropdown = ""
-        if (type.length > 0) {
-            let typeListItems = type.map((types, i) => {
-                return <option key={i}>{types}</option>
-            })
+    let typeDropdown = ""
+    if (type.length > 0) {
+        let typeListItems = type.map((types, i) => {
+            return <option key={i}>{types}</option>
+        })
 
-            typeDropdown =
+        typeDropdown =
 
-                <Form.Select onChange={searchTypeHandler} className="w-25">
-                    <option value="">Pick Something</option>
-                    {typeListItems}
+            <Form.Select onChange={searchTypeHandler} className="w-25">
+                <option value="">Select a type</option>
+                {typeListItems}
 
-                </Form.Select>
-        }
-    
+            </Form.Select>
+    }
+
+
+    let handleShowAllData = (event) => {
+
+        setShowALLTable(true)
+
+    }
+
+
+
+
+
+
 
     return (
         <div className="NationalParkHero">
             <Header />
             <div className="MountainsInfoText d-flex justify-content-top align-items-center flex-column margin-top: 8px">
-
-
                 Parks
+                <br></br>
+                <div className="mb-2">
+                    <Button onClick={handleShowAllData} variant="light" size="lg">View All</Button>
+                </div>
 
                 <Form.Select onChange={searchTypeHandler} className="w-25" aria-label="Default select example">
                     <option>Select park by</option>
@@ -143,27 +188,51 @@ function Parks() {
 
 
 
+
+
             </div>
 
+
+
+
             {/* <Footer /> */}
+            {showAllTable &&
+
+
+                // you used props here
+                <ParksTable turds={allNationalParks} />
+            }
+
 
         </div>
 
 
+    )
 
-
-    );
 }
+
+
+
 
 
 export default Parks;
 
 
-// 8/08/22
-// Lets get the new drop down items working with a selection
-// use proect exapmples as reference.
+// 8/17/22
 
-// make the problems BITE sized
+// Youre gonna have to filter the users in the next objective
+// "filtered users"
+
+// ex
+//  let randomMethod = users.filter((user) =>{
+//     if(user.username === "Bret"){
+//         return true
+//     }else{
+//             false
+//         }
+//     }
+
+ 
 
 
 

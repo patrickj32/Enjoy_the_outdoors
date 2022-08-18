@@ -23,7 +23,6 @@ function MountainsInfo() {
 
         setMountain([])
 
-        // if (event.target.value === "pickamountain") {
 
         fetch(`/data/mountains.json`,
             {
@@ -106,5 +105,5 @@ function MountainsInfo() {
 
 
 
-// 08/11/2022
+
 

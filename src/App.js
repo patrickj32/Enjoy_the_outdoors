@@ -15,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="mountains" element={<MountainsInfo />} />
         <Route path="parks" element={<Parks />} />
+        
 
 
 
