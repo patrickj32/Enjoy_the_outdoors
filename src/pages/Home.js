@@ -1,4 +1,5 @@
 import Attractions from "../components/Attractions"
+import FilteredLocations from "../components/FilteredLocations"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
@@ -9,11 +10,11 @@ function Home(props) {
 
     return (
         <div className="Home">
-        <Header />
-        {/* <ParksTable /> */}
-        <Hero />
-        <Attractions />
-        <Footer />
+            <Header />
+            {/* <Hero /> */}
+            <FilteredLocations />
+            {/* <Attractions />
+            <Footer /> */}
 
         </div>
 

@@ -21,8 +21,9 @@ function Parks() {
 
 
     let [locations, setLocations] = useState([]);
-   
+    // let [filteredLocations, setFilteredLoctions] = useState([]);
     let [type, setTypes] = useState([]);
+    // let [filteredType, setFilteredType] = useState([]);
     let [allNationalParks, setAllNationalParks] = useState([]);
     let [showAllTable, setShowALLTable] = useState(false);
 
@@ -200,7 +201,7 @@ function Parks() {
 
 
                 // you used props here
-                <ParksTable turds={allNationalParks} />
+                <ParksTable ParkTableprop={allNationalParks} />
             }
 
 
@@ -232,7 +233,9 @@ export default Parks;
 //         }
 //     }
 
- 
+//  8/18/22
+// not the most productve day
+// use the "bret" gist ()and the Users example and appy it make a suedo location filter with it using "Alabama for starters"
 
 
 

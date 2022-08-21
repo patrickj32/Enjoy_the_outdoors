@@ -9,37 +9,39 @@ function ParksTable(props) {
     return (
         <div className="ParksTable">
 
-                <Table striped bordered hover size="sm" variant="light" >
+            <Table striped bordered hover size="sm" variant="light" >
 
-                    <thead>
-                        <tr>
-                            <th>Location</th>
-                            <th>Address</th>
-                            <th>City</th>
-                            <th>Location ID</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>State</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>Location ID</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                        {
-                            // you used props here. 
-                            props.turds.map((park, i) => {
+                    {
+                        // you used props here. 
+                        props.ParkTableprop.map((park, i) => {
 
-                                // ********
-                                return (
-                                    <tr key={i}>
-                                        <td>{park.LocationName}</td>
-                                        <td>{park.Address}</td>
-                                        <td>{park.City}</td>
-                                        <td>{park.LocationID}</td>
+                            // ********
+                            return (
+                                <tr key={i}>
+                                    <td>{park.LocationName}</td>
+                                    <td>{park.State}</td>
+                                    <td>{park.Address}</td>
+                                    <td>{park.City}</td>
+                                    <td>{park.LocationID}</td>
 
-                                    </tr>
-                                )
-                            })
-                        }
+                                </tr>
+                            )
+                        })
+                    }
 
-                    </tbody>
-                </Table>
+                </tbody>
+            </Table>
 
 
         </div>
