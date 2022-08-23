@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import ParksTable from "./ParksTable";
 
 function FilteredLocations(props) {
-    let [locations, setLocations] = useState([])
-    let [filteredLocation, setFilteredLocations] = useState([]);
+    let [parks, setParks] = useState([])
+    let [filteredParks, setFilteredParks] = useState([]);
     let [showAllTable, setShowAllTable] = useState(false);
 
 
@@ -12,10 +12,10 @@ function FilteredLocations(props) {
 
         fetch("/data/nationalparks.json")
             .then((response) => response.json())
-            .then((locationsFromTheAPI) => {
+            .then((parksFromTheAPI) => {
 
-                setLocations(locationsFromTheAPI.parks)
-                console.log((locationsFromTheAPI.parks))
+                setParks(parksFromTheAPI.parks)
+                console.log((parksFromTheAPI.parks))
 
             })
             .catch((err) => console.log(err))
@@ -29,22 +29,7 @@ function FilteredLocations(props) {
 
     }
 
-    let handleShowAlabama = (event) => {
-
-        let showAlabama = locations.filter((park) => {
-            if (park.State === 'Alabama') {
-                console.log("true")
-                return true
-
-            } else {
-                return false
-                console.log("false")
-            }
-        })
-        console.log("clicked")
-        setFilteredLocations(showAlabama)
-
-    }
+    
 
 
 
@@ -54,14 +39,14 @@ function FilteredLocations(props) {
             hello
             <button onClick={handleShowAllData}>view all users</button>
 
-            <button onClick={handleShowAlabama}>only show Alabama</button>
+            <button onClick={handleShowFilteredParkByLocation}>only show Alabama</button>
 
             {showAllTable &&
-                <ParksTable ParkTableprop={locations} />
+                <ParksTable ParkTableprop={park} />
             }
 
-            {filteredLocation.length > 0 &&
-                <ParksTable ParkTableprop={filteredLocation} />
+            {filteredPark.length > 0 &&
+                <ParksTable ParkTableprop={filteredPark} />
             }
 
         </div>

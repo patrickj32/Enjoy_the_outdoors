@@ -21,7 +21,7 @@ function Parks() {
 
 
     let [locations, setLocations] = useState([]);
-    // let [filteredLocations, setFilteredLoctions] = useState([]);
+    let [filteredParkLocations, setFilteredParkLocations] = useState([]);
     let [type, setTypes] = useState([]);
     // let [filteredType, setFilteredType] = useState([]);
     let [allNationalParks, setAllNationalParks] = useState([]);
@@ -119,7 +119,22 @@ function Parks() {
 
     }, []);
 
+    let handleShowFilteredParksByLocation = (event) => {
 
+        let filteredShit = allNationalParks.filter((mypark) => {
+            if (mypark.State === event.target.value) {
+                console.log("true")
+                return true
+
+            }
+
+        })
+        console.log("clicked")
+        // setShowAllTable(false)
+
+        setFilteredParkLocations(filteredShit)
+
+    }
 
     // ****Dropdowns and buttons*****
     let locationsDropdown = ""
@@ -128,17 +143,21 @@ function Parks() {
             return <option key={i}>{location}</option>
         })
 
+
         locationsDropdown =
 
-            <Form.Select onChange={searchTypeHandler} className="w-25">
-                <option value="">Select a location</option>
+            <Form.Select onChange={handleShowFilteredParksByLocation} className="w-25">
+                <option  value="">Select a location</option>
                 {locationsListItems}
 
             </Form.Select>
+        console.log("dropdown clicked")
 
 
 
     }
+
+
 
     let typeDropdown = ""
     if (type.length > 0) {
@@ -148,7 +167,7 @@ function Parks() {
 
         typeDropdown =
 
-            <Form.Select onChange={searchTypeHandler} className="w-25">
+            <Form.Select  onChange={searchTypeHandler} className="w-25">
                 <option value="">Select a type</option>
                 {typeListItems}
 
@@ -165,9 +184,6 @@ function Parks() {
 
 
 
-
-
-
     return (
         <div className="NationalParkHero">
             <Header />
@@ -180,7 +196,7 @@ function Parks() {
 
                 <Form.Select onChange={searchTypeHandler} className="w-25" aria-label="Default select example">
                     <option>Select park by</option>
-                    <option value="location">Location</option>
+                    <option  value="location">Location</option>
                     <option value="type">Type</option>
                 </Form.Select>
 
@@ -198,10 +214,12 @@ function Parks() {
 
             {/* <Footer /> */}
             {showAllTable &&
-
-
-                // you used props here
+                 // you used props here
                 <ParksTable ParkTableprop={allNationalParks} />
+            }
+
+            {filteredParkLocations.length > 0 &&
+                <ParksTable ParkTableprop={filteredParkLocations} />
             }
 
 
@@ -233,9 +251,6 @@ export default Parks;
 //         }
 //     }
 
-//  8/18/22
-// not the most productve day
-// use the "bret" gist ()and the Users example and appy it make a suedo location filter with it using "Alabama for starters"
-
-
+//  8/23/22
+// type flter method will use "contain"
 

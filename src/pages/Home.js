@@ -11,10 +11,10 @@ function Home(props) {
     return (
         <div className="Home">
             <Header />
-            {/* <Hero /> */}
-            <FilteredLocations />
-            {/* <Attractions />
-            <Footer /> */}
+            <Hero />
+            {/* <FilteredLocations /> */}
+            <Attractions />
+            <Footer />
 
         </div>
 
