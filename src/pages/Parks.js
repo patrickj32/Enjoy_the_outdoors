@@ -23,7 +23,7 @@ function Parks() {
     let [locations, setLocations] = useState([]);
     let [filteredParkLocations, setFilteredParkLocations] = useState([]);
     let [type, setTypes] = useState([]);
-    // let [filteredType, setFilteredType] = useState([]);
+    let [filteredParkTypes, setFilteredParkTypes] = useState([]);
     let [allNationalParks, setAllNationalParks] = useState([]);
     let [showAllTable, setShowALLTable] = useState(false);
 
@@ -119,6 +119,8 @@ function Parks() {
 
     }, []);
 
+    // ****Filter methods****
+
     let handleShowFilteredParksByLocation = (event) => {
 
         let filteredShit = allNationalParks.filter((mypark) => {
@@ -135,6 +137,25 @@ function Parks() {
         setFilteredParkLocations(filteredShit)
 
     }
+
+    let handleShowFilteredParksByType = (event) => {
+
+        let filteredTypeShit = allNationalParks.filter((mypark) => {
+            if (mypark.LocationName.includes(event.target.value)) {
+                console.log("true")
+                return true
+
+            }
+
+        })
+        console.log("type selected")
+        // setShowAllTable(false)
+
+        setFilteredParkTypes(filteredTypeShit)
+
+    }
+
+    // ************************************
 
     // ****Dropdowns and buttons*****
     let locationsDropdown = ""
@@ -167,12 +188,13 @@ function Parks() {
 
         typeDropdown =
 
-            <Form.Select  onChange={searchTypeHandler} className="w-25">
+            <Form.Select onChange={handleShowFilteredParksByType} className="w-25">
                 <option value="">Select a type</option>
                 {typeListItems}
 
             </Form.Select>
     }
+    // ************************
 
 
     let handleShowAllData = (event) => {
@@ -220,6 +242,11 @@ function Parks() {
 
             {filteredParkLocations.length > 0 &&
                 <ParksTable ParkTableprop={filteredParkLocations} />
+            }
+
+            {filteredParkTypes.length > 0 && 
+                <ParksTable ParkTableprop={filteredParkTypes} />
+
             }
 
 
