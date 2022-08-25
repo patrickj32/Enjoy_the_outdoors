@@ -5,6 +5,7 @@ import Footer from "../components/Footer"
 import MtnFigure from '../images/MtnFigure.png'
 import { Dropdown, Form } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
+import MountainsTable from "../components/MountainsTable"
 
 
 
@@ -12,6 +13,7 @@ import { useState, useEffect } from 'react'
 function MountainsInfo() {
 
     let [mountains, setMountain] = useState([]);
+    let [filteredMountains, setFilteredMountain] = useState([]);
 
     useEffect(() => {
 
@@ -51,6 +53,23 @@ function MountainsInfo() {
 
 
     }   
+    let handleFilteredMountains = (event) => {
+
+        let filteredMtnShit = mountains.filter(filteredMtn => {
+            if (filteredMtn.name === event.target.value) {
+                console.log("true")
+                return true
+
+            }
+
+        })
+        console.log("clicked")
+        // setShowAllTable(false)
+
+        setFilteredMountain(filteredMtnShit)
+
+    }
+
 
     
     
@@ -63,13 +82,15 @@ function MountainsInfo() {
         
 
         mountainsDropdown =
-            <Form.Select onChange={mountainsearchHandler} className="w-25" aria-label="Default select example">
+            <Form.Select onChange={handleFilteredMountains} className="w-25" aria-label="Default select example">
                 <option value="">Select a Mountain</option>
                 {mountainsListItems}
 
             </Form.Select>
 
     }
+
+
     
 
         return (
@@ -79,19 +100,27 @@ function MountainsInfo() {
 
 
                     Mountains
-
                     
 
-                        {/* <Form.Select onClick={mountainsearchHandler} className="w-25" aria-label="Default select example">
-                        <option value="pickamountain">Select a Mountain</option>
-                        </Form.Select> */}
                     {mountainsDropdown}
+                      </div>
+                    {
+                        filteredMountains.length > 0 &&
+                        <MountainsTable MtnTableprop={filteredMountains} />
+
+                    }
+                    
 
 
-                </div>
+               
+                
+              
 
                 <Footer />
+                
             </div>
+            
+            
 
 
 

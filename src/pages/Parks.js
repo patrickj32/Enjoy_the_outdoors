@@ -9,6 +9,7 @@ import { Button } from 'react-bootstrap'
 import { Table } from 'react-bootstrap'
 import { getConfig } from "@testing-library/react"
 import ParksTable from "../components/ParksTable"
+import MountainsTable from "../components/MountainsTable"
 import { useResolvedPath } from "react-router-dom"
 
 
@@ -234,7 +235,6 @@ function Parks() {
 
 
 
-            {/* <Footer /> */}
             {showAllTable &&
                  // you used props here
                 <ParksTable ParkTableprop={allNationalParks} />
@@ -248,6 +248,8 @@ function Parks() {
                 <ParksTable ParkTableprop={filteredParkTypes} />
 
             }
+            <Footer />
+
 
 
         </div>

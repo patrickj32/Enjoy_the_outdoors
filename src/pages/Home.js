@@ -12,7 +12,6 @@ function Home(props) {
         <div className="Home">
             <Header />
             <Hero />
-            {/* <FilteredLocations /> */}
             <Attractions />
             <Footer />
 
