@@ -100,13 +100,13 @@ function MountainsInfo() {
 
 
                     Mountains
-                    
+                     {mountainsDropdown}
 
-                    {mountainsDropdown}
                       </div>
                     {
+                        // you used props here. 
                         filteredMountains.length > 0 &&
-                        <MountainsTable MtnTableprop={filteredMountains} />
+                        <MountainsTable  MtnTableprop={filteredMountains} />
 
                     }
                     

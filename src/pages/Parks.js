@@ -136,6 +136,7 @@ function Parks() {
         // setShowAllTable(false)
 
         setFilteredParkLocations(filteredShit)
+        setShowALLTable(false)
 
     }
 
@@ -153,6 +154,8 @@ function Parks() {
         // setShowAllTable(false)
 
         setFilteredParkTypes(filteredTypeShit)
+        setShowALLTable(false)
+
 
     }
 
@@ -185,6 +188,7 @@ function Parks() {
     if (type.length > 0) {
         let typeListItems = type.map((types, i) => {
             return <option key={i}>{types}</option>
+
         })
 
         typeDropdown =
@@ -192,6 +196,7 @@ function Parks() {
             <Form.Select onChange={handleShowFilteredParksByType} className="w-25">
                 <option value="">Select a type</option>
                 {typeListItems}
+                
 
             </Form.Select>
     }
@@ -201,6 +206,11 @@ function Parks() {
     let handleShowAllData = (event) => {
 
         setShowALLTable(true)
+        setFilteredParkTypes([])
+        setFilteredParkLocations([])
+
+
+
 
     }
 
@@ -248,7 +258,7 @@ function Parks() {
                 <ParksTable ParkTableprop={filteredParkTypes} />
 
             }
-            <Footer />
+                        <Footer />
 
 
 

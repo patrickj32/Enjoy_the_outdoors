@@ -110,6 +110,16 @@ code {
 
 }
 
+.MountainsTable{
+
+  font-style: italic;
+  font-weight: bold;
+  
+
+}
+
+
+
 /* **********National Park********** */
 .NationalParkHero{
   background-image: url("./images/NationalPark.jpg");

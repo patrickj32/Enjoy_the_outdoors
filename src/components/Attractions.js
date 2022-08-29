@@ -12,7 +12,7 @@ function Attractions(props) {
                 <Card  tyle={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title>Mountains</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">Go look at some fucking mountains</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Go look at some mountains</Card.Subtitle>
                         <Card.Text>
                             <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/a3/4d/ef.jpg"></img>
                         </Card.Text>
@@ -23,7 +23,7 @@ function Attractions(props) {
                 <Card  style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title>Waterfalls</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">Go look at some fucking waterfalls</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Go look at some waterfalls</Card.Subtitle>
                         <Card.Text>
                             <img className="waterFallPic" src='https://parktrust.org/wp-content/uploads/fly-images/6886/Untitled-design-28-640x360-c.png'></img>
 
@@ -36,7 +36,7 @@ function Attractions(props) {
                 <Card  style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title>Trails</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">Go walk some fucking trails</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Go walk some trails</Card.Subtitle>
                         <Card.Text>
                             <img className="hickingPic" src="https://www.tripsavvy.com/thmb/udfIrUb_SPsALK5HbhXZ2UQlmEo=/735x0/man-on-early-morning-hike-up-mountainside-1056063244-06433cd9244c4ca38ec43d2782062ba1.jpg"></img>
                         </Card.Text>

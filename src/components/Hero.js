@@ -9,7 +9,7 @@ function Hero(prop) {
             <div className="Hero HeroText d-flex justify-content-center align-items-center flex-column margin-top: 25px">
 
                 <img src={MtnFigure} width="30%" />
-                Go The Fuck Outside
+                Go The F### Outside
 
                 <Button className="LetsGoBtn opacity-75 " variant="outline-secondary">Lets Go</Button>
 
@@ -31,4 +31,3 @@ function Hero(prop) {
 
 export default Hero
 
-// *****Find inspriation! Look at legit sites***

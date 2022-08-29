@@ -7,9 +7,9 @@ function MountainsTable(props) {
 
 
     return (
-        <div className="MountainsTable">
+        <div className="MountainsTable ">
 
-            <Table striped bordered hover size="lg" variant="light" >
+            <Table striped bordered hover size="lg" variant="light"  >
 
                 <thead>
                     <tr>

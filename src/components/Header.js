@@ -35,7 +35,7 @@ function Header(props) {
                             <Nav.Link >Mountains</Nav.Link>
                         </LinkContainer>
 
-                        <Nav.Link href="#link">Info</Nav.Link>
+                        {/* <Nav.Link href="#link">Info</Nav.Link> */}
 
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -45,7 +45,7 @@ function Header(props) {
                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                 </NavDropdown> */}
                     </Nav>
-                    <Form className="d-flex ms-auto">
+                    {/* <Form className="d-flex ms-auto">
                         <Form.Control
                             type="search"
                             placeholder="Search"
@@ -55,7 +55,7 @@ function Header(props) {
                         <Button className="SearchButton" variant="outline-dark">Search
 
                         </Button>
-                    </Form>
+                    </Form> */}
 
                 </Navbar.Collapse>
             </Container >
