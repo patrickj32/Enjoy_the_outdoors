@@ -94,9 +94,10 @@ function MountainsInfo() {
     
 
         return (
+            <div className="MountainsInfo" >
             <div className="MountainsInfoHero">
                 <Header />
-                <div className=" MountainsInfoHero MountainsInfoText d-flex justify-content-top align-items-center flex-column margin-top: 8px">
+                <div className="MountainsInfoText d-flex justify-content-top align-items-center flex-column margin-top: 8px">
 
 
                     Mountains
@@ -116,8 +117,10 @@ function MountainsInfo() {
                 
               
 
-                <Footer />
                 
+                
+            </div>
+            <Footer />
             </div>
             
             

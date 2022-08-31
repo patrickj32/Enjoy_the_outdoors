@@ -4,23 +4,23 @@ import Card from 'react-bootstrap/Card'
 
 
 function Attractions(props) {
-    return (  
-<div className="Attractions">
+    return (
+        <div className="Attractions">
 
 
             <CardGroup bg="light" >
-                <Card  tyle={{ width: '18rem' }}>
+                <Card tyle={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title>Mountains</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">Go look at some mountains</Card.Subtitle>
                         <Card.Text>
-                            <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/a3/4d/ef.jpg"></img>
+                            <img className="dudeMtnPic" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/a3/4d/ef.jpg"></img>
                         </Card.Text>
                         <Card.Link href="#">Card Link</Card.Link>
-                            <Card.Link href="#">Another Link</Card.Link>
+                        <Card.Link href="#">Another Link</Card.Link>
                     </Card.Body>
                 </Card>
-                <Card  style={{ width: '18rem' }}>
+                <Card style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title>Waterfalls</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">Go look at some waterfalls</Card.Subtitle>
@@ -33,7 +33,7 @@ function Attractions(props) {
                     </Card.Body>
 
                 </Card>
-                <Card  style={{ width: '18rem' }}>
+                <Card style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title>Trails</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">Go walk some trails</Card.Subtitle>
@@ -44,7 +44,8 @@ function Attractions(props) {
                         <Card.Link href="#">Another Link</Card.Link>
                     </Card.Body>
                 </Card>
-            </CardGroup></div>
+            </CardGroup>
+        </div>
 
     );
 }

@@ -172,7 +172,7 @@ function Parks() {
         locationsDropdown =
 
             <Form.Select onChange={handleShowFilteredParksByLocation} className="w-25">
-                <option  value="">Select a location</option>
+                <option value="">Select a location</option>
                 {locationsListItems}
 
             </Form.Select>
@@ -196,7 +196,7 @@ function Parks() {
             <Form.Select onChange={handleShowFilteredParksByType} className="w-25">
                 <option value="">Select a type</option>
                 {typeListItems}
-                
+
 
             </Form.Select>
     }
@@ -218,49 +218,53 @@ function Parks() {
 
 
     return (
-        <div className="NationalParkHero">
-            <Header />
-            <div className="MountainsInfoText d-flex justify-content-top align-items-center flex-column margin-top: 8px">
-                Parks
-                <br></br>
-                <div className="mb-2">
-                    <Button onClick={handleShowAllData} variant="light" size="lg">View All</Button>
+        <div className="Parks d-flex flex-column justify-content-between">
+            <div className="NationalParkHero ">
+                <Header />
+                <div className="MountainsInfoText d-flex justify-content-top align-items-center flex-column margin-top: 8px">
+                    Parks
+                    <br></br>
+                    <div className="mb-2">
+                        <Button onClick={handleShowAllData} variant="light" size="lg">View All</Button>
+                    </div>
+
+                    <Form.Select onChange={searchTypeHandler} className="w-25" aria-label="Default select example">
+                        <option>Select park by</option>
+                        <option value="location">Location</option>
+                        <option value="type">Type</option>
+                    </Form.Select>
+
+                    {locationsDropdown}
+                    {typeDropdown}
+
+
+
+
+
                 </div>
 
-                <Form.Select onChange={searchTypeHandler} className="w-25" aria-label="Default select example">
-                    <option>Select park by</option>
-                    <option  value="location">Location</option>
-                    <option value="type">Type</option>
-                </Form.Select>
-
-                {locationsDropdown}
-                {typeDropdown}
 
 
+                <div className= "container">
+                    {showAllTable &&
+                        // you used props here
+                        <ParksTable ParkTableprop={allNationalParks} />
+                    }
 
+                    {filteredParkLocations.length > 0 &&
+                        <ParksTable ParkTableprop={filteredParkLocations} />
+                    }
 
+                    {filteredParkTypes.length > 0 &&
+                        <ParksTable ParkTableprop={filteredParkTypes} />
+
+                    }
+
+                </div>
+
+                <Footer />
 
             </div>
-
-
-
-
-            {showAllTable &&
-                 // you used props here
-                <ParksTable ParkTableprop={allNationalParks} />
-            }
-
-            {filteredParkLocations.length > 0 &&
-                <ParksTable ParkTableprop={filteredParkLocations} />
-            }
-
-            {filteredParkTypes.length > 0 && 
-                <ParksTable ParkTableprop={filteredParkTypes} />
-
-            }
-                        <Footer />
-
-
 
         </div>
 

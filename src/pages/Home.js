@@ -34,6 +34,7 @@ export default Home
 // - Footer isnt positioned correctly (something is going on with the parks page that is making it do the wierd shit)
 
 // ********MOUNTAINS PAGE********
+// - Page is slightly cramped. We want images
 // - List displays at the bottom of page
 
 
