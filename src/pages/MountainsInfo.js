@@ -72,7 +72,6 @@ function MountainsInfo() {
 
 
     
-    
 
     let mountainsDropdown = ""
     if (mountains.length > 0) {
@@ -104,12 +103,14 @@ function MountainsInfo() {
                      {mountainsDropdown}
 
                       </div>
+                    <div className="container">
                     {
                         // you used props here. 
                         filteredMountains.length > 0 &&
                         <MountainsTable  MtnTableprop={filteredMountains} />
 
                     }
+                    </div>
                     
 
 

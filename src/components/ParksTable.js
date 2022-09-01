@@ -9,7 +9,7 @@ function ParksTable(props) {
     return (
         <div className="ParksTable">
 
-            <Table striped bordered hover size="sm" variant="light" >
+            <Table striped bordered hover size="lg" variant="light" >
 
                 <thead>
                     <tr>

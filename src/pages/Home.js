@@ -35,7 +35,6 @@ export default Home
 
 // ********MOUNTAINS PAGE********
 // - Page is slightly cramped. We want images
-// - List displays at the bottom of page
 
 
 
@@ -43,6 +42,7 @@ export default Home
 
 // - Lists display on top of eachother. When one list displays, the others should disapear 
 // - Do we NEED a search bar?
+// - List displays at the bottom of page
 
 
 

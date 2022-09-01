@@ -13,6 +13,8 @@ function MountainsTable(props) {
 
                 <thead>
                     <tr>
+                        <th></th>
+
                         <th>Mountain Name</th>
                         <th>Elevation</th>
                         <th>Effort</th>
@@ -27,7 +29,12 @@ function MountainsTable(props) {
 
                             // ********
                             return (
+
                                 <tr key={i}>
+                                    <td><img className="Mtnjpegs" src={process.env.PUBLIC_URL + '/mountainImages/' + mtn.img}
+                                        alt={mtn.name} /></td>
+
+
                                     <td>{mtn.name}</td>
                                     <td>{mtn.elevation}</td>
                                     <td>{mtn.effort}</td>

@@ -136,6 +136,8 @@ function Parks() {
         // setShowAllTable(false)
 
         setFilteredParkLocations(filteredShit)
+        setFilteredParkTypes([])
+
         setShowALLTable(false)
 
     }
@@ -155,6 +157,8 @@ function Parks() {
 
         setFilteredParkTypes(filteredTypeShit)
         setShowALLTable(false)
+        setFilteredParkLocations([])
+
 
 
     }
