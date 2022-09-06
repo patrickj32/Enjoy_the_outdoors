@@ -2,6 +2,8 @@ import Navbar from 'react-bootstrap/Navbar'
 import NavbarBrand from 'react-bootstrap/NavbarBrand'
 import CardGroup from 'react-bootstrap/CardGroup'
 import Card from 'react-bootstrap/Card'
+import FooterTree from '../images/FooterTree.png'
+
 
 
 
@@ -43,14 +45,14 @@ function Footer(props) {
                 </Card>
                 <Card bg="dark" text="white" style={{ width: '18rem' }}>
                     <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the
-                            bulk of the card's content.
+                        {/* <Card.Title>Card Title</Card.Title> */}
+                        {/* <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle> */}
+                        <Card.Text className='footerPic' >
+                            <img src={FooterTree} width="70%"  />
+
                         </Card.Text>
-                        <Card.Link href="#">Card Link</Card.Link>
-                        <Card.Link href="#">Another Link</Card.Link>
+                        {/* <Card.Link href="#">Card Link</Card.Link>
+                        <Card.Link href="#">Another Link</Card.Link> */}
                     </Card.Body>
                 </Card>
             </CardGroup>

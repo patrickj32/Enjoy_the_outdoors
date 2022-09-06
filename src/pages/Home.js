@@ -25,8 +25,9 @@ export default Home
 
 // Bugs and fixes....
 
+// Would like the  compass pic inn the tab
+
 // ********HOME PAGE********
-// - Waterfall pic is wrong size
 // - Add links to cards?
 
 
@@ -34,8 +35,12 @@ export default Home
 // - Footer isnt positioned correctly (something is going on with the parks page that is making it do the wierd shit)
 
 // ********MOUNTAINS PAGE********
-// - Page is slightly cramped. We want images
 
+
+
+    // ********FOOTER********
+
+// - Footer image isnt quite right
 
 
 // ********DONE********
@@ -43,7 +48,9 @@ export default Home
 // - Lists display on top of eachother. When one list displays, the others should disapear 
 // - Do we NEED a search bar?
 // - List displays at the bottom of page
-
+//  Mountaininfo list displays images now
+// - Waterfall pic is wrong size
+// - Images dont generate for every selections. If an images doesnt exist, what do we do?
 
 
 

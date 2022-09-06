@@ -52,7 +52,7 @@ function MountainsInfo() {
         // }
 
 
-    }   
+    }
     let handleFilteredMountains = (event) => {
 
         let filteredMtnShit = mountains.filter(filteredMtn => {
@@ -71,14 +71,14 @@ function MountainsInfo() {
     }
 
 
-    
+
 
     let mountainsDropdown = ""
     if (mountains.length > 0) {
-        let mountainsListItems = mountains.map((mountain,i) => {
-          return <option key={i}>{mountain.name}</option>
+        let mountainsListItems = mountains.map((mountain, i) => {
+            return <option key={i}>{mountain.name}</option>
         })
-        
+
 
         mountainsDropdown =
             <Form.Select onChange={handleFilteredMountains} className="w-25" aria-label="Default select example">
@@ -90,50 +90,50 @@ function MountainsInfo() {
     }
 
 
-    
 
-        return (
-            <div className="MountainsInfo" >
+
+    return (
+        <div className="MountainsInfo" >
             <div className="MountainsInfoHero">
                 <Header />
                 <div className="MountainsInfoText d-flex justify-content-top align-items-center flex-column margin-top: 8px">
 
 
                     Mountains
-                     {mountainsDropdown}
+                    {mountainsDropdown}
 
-                      </div>
-                    <div className="container">
+                </div>
+                <div className="container">
                     {
                         // you used props here. 
                         filteredMountains.length > 0 &&
-                        <MountainsTable  MtnTableprop={filteredMountains} />
+                        <MountainsTable MtnTableprop={filteredMountains} />
 
                     }
-                    </div>
-                    
+                </div>
 
 
-               
-                
-              
 
-                
-                
+
+
+
+
+
+
             </div>
             <Footer />
-            </div>
-            
-            
+        </div>
 
 
 
 
-        );
-    
+
+
+    );
+
 }
 
-    export default MountainsInfo;
+export default MountainsInfo;
 
 
 

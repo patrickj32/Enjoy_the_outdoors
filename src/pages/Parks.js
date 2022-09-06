@@ -11,6 +11,7 @@ import { getConfig } from "@testing-library/react"
 import ParksTable from "../components/ParksTable"
 import MountainsTable from "../components/MountainsTable"
 import { useResolvedPath } from "react-router-dom"
+import Attractions from "../components/Attractions"
 
 
 
@@ -225,6 +226,7 @@ function Parks() {
         <div className="Parks d-flex flex-column justify-content-between">
             <div className="NationalParkHero ">
                 <Header />
+
                 <div className="MountainsInfoText d-flex justify-content-top align-items-center flex-column margin-top: 8px">
                     Parks
                     <br></br>
@@ -249,6 +251,7 @@ function Parks() {
 
 
 
+
                 <div className= "container">
                     {showAllTable &&
                         // you used props here
@@ -265,6 +268,7 @@ function Parks() {
                     }
 
                 </div>
+
 
                 <Footer />
 
