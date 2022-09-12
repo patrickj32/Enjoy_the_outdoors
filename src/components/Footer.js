@@ -48,7 +48,8 @@ function Footer(props) {
                         {/* <Card.Title>Card Title</Card.Title> */}
                         {/* <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle> */}
                         <Card.Text className='footerPic' >
-                            <img src={FooterTree} width="70%"  />
+                            <img src={FooterTree} width="60%"  />
+                            <p>Go The F#### Outside 2022</p>
 
                         </Card.Text>
                         {/* <Card.Link href="#">Card Link</Card.Link>

@@ -89,6 +89,21 @@ function MountainsInfo() {
 
     }
 
+    //function that can "fetch" the sunset/sunrise times
+    async function getSunsetForMountain(lat, lng) {
+        let response = await fetch(`http://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`)
+        let data = await response.json()
+        return data
+    }
+
+    //Using the function to fetch the sunset/sunrise times for a specific mountain 
+    getSunsetForMountain("44.196174", "-71.544085").then(sunsetData => {
+        console.log(sunsetData.results)
+        console.log(sunsetData.results.sunset)
+       
+    });
+
+
 
 
 
@@ -108,8 +123,9 @@ function MountainsInfo() {
                         // you used props here. 
                         filteredMountains.length > 0 &&
                         <MountainsTable MtnTableprop={filteredMountains} />
-
                     }
+
+
                 </div>
 
 

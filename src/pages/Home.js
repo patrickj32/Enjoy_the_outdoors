@@ -23,16 +23,21 @@ function Home(props) {
 
 export default Home
 
-// Bugs and fixes....
+    // Bugs and fixes....
 
-// Would like the  compass pic inn the tab
+    // Would like the  compass pic inn the tab
 
-// ********HOME PAGE********
-// - Add links to cards?
+    // ********HOME PAGE********
+    // - Add links to cards?
 
 
-// ********PARKS PAGE********
-// - Footer isnt positioned correctly (something is going on with the parks page that is making it do the wierd shit)
+    // ********PARKS PAGE********
+    // - Footer isnt positioned correctly (something is going on with the parks page that is making it do the wierd shit)
+
+    //  ********STRETCH GOAL********
+//     ****- Some, but not all National Parks, contain a "Visit" property that contains a URL to a page about the park.
+// You can display the URL in a hyperlink(ex: tag) along with park details so the user can click on it and visit the park's page from your list. 
+// Make sure to open the visited page in a different tab / window!
 
 // ********MOUNTAINS PAGE********
 

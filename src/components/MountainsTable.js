@@ -19,12 +19,16 @@ function MountainsTable(props) {
                         <th>Elevation</th>
                         <th>Effort</th>
                         <th>Description</th>
+                        <th>Sunrise</th>
+
                     </tr>
                 </thead>
                 <tbody>
 
                     {
-                        // you used props here. 
+                        // you used props here
+
+
                         props.MtnTableprop.map((mtn, i) => {
 
                             // ********
@@ -39,6 +43,7 @@ function MountainsTable(props) {
                                     <td>{mtn.elevation}</td>
                                     <td>{mtn.effort}</td>
                                     <td>{mtn.desc}</td>
+                                    <td>{mtn.coords.lat} {mtn.coords.lng}</td>
 
 
                                 </tr>
